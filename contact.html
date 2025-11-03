@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get in Touch - Samriddhi Singh</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- ✅ NAVBAR -->
+  <header class="navbar">
+    <div class="logo">SAMRIDDHI SINGH</div>
+    <nav class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="index.html">ABOUT ME</a></li>
+        <li><a href="index.html#projects">PROJECTS</a></li>
+        <li><a href="index.html#skills">SKILLS</a></li>
+        <li><a href="index.html#experience">EXPERIENCE</a></li>
+        <li><a href="contact.html" class="active">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="contact-container fade-slide">
+      <div class="contact-info">
+        <h2>GET IN TOUCH!</h2>
+        <p class="intro-text">I'd like to hear from you!</p>
+        <p>Whether you’re looking to discuss a project, collaborate, or just say hello — I’d love to connect!</p>
+
+        <div class="email">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:ishkumarsingh.singh@gmail.com">ishkumarsingh707.singh@gmail.com</a>
+        </div>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-behance"></i></a>
+          <a href="#"><i class="fab fa-vimeo-v"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="input-row">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+          </div>
+          <input type="email" placeholder="Email *" required>
+          <textarea rows="5" placeholder="Message"></textarea>
+
+          <div class="form-buttons">
+            <button type="submit" class="animated-btn"><span>Send</span></button>
+            <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+          </div>
+          <p class="success-message" id="successMsg">Message Sent! ✅</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ✅ Message Sent Animation (no backend)
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMsg');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      successMsg.style.opacity = '1';
+      successMsg.style.transform = 'translateY(0)';
+      setTimeout(() => {
+        successMsg.style.opacity = '0';
+        successMsg.style.transform = 'translateY(10px)';
+        form.reset();
+      }, 2500);
+    });
+  </script>
+
+</body>
+</html>
+<!-- Social Icons -->
+        <div class="social-icons">
+          <a href="https://linkedin.com" target="_blank" class="icon linkedin"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com" target="_blank" class="icon github"><i class="fab fa-github"></i></a>
+          <a href="#" class="icon like"><i class="fas fa-thumbs-up"></i></a>
+        </div>
+      </div>
